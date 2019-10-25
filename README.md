@@ -8,7 +8,7 @@ A very basic implementation of Mediated Authentication written in Python
 ### How It Works
 ---------------------------------------------------------------------------------------- 
 1. Alice sends encrypted msg `I need to communicate with BOB, kindly send session key` to KDC encrypted with private key, K(A).
-2. KDC Decrypts using the message same secret key and confirms that it is from Alice.
+2. KDC Decrypts the message using the same secret key K(A) and confirms that it is from Alice.
 3. KDC Generates the session keys for A and B, K(AB).
 5. KDC encrypts the generated session key using the shared key with Alice, K(A), and sends to Alice
 6. KDC encrypts the generated session key using the shared key with Bob, K(B), and sends to Bob 
