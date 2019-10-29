@@ -60,7 +60,7 @@ def receiveMsg(s, listKeys):
 
         while True:
             data = conn.recv(1024)
-            print('\n Received From Client: {!r}'.format(data))
+            print('\n Received : {!r}'.format(data))
             time.sleep(SLEEPING_TIME)
 
             # decode Message

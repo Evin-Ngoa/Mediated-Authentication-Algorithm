@@ -10,8 +10,7 @@ HOW TO RUN
 
 # Import socket module 
 import socket                
-import time  
-import keyGen    
+import time     
 import random
 import utils
 
