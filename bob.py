@@ -13,9 +13,9 @@ import time
 import random	
 import utils
 
-ALICE_INITIAL_SECRET_KEY = "This-is-Alice-secret-1624259"
+
 BOB_INITIAL_SECRET_KEY = "This-is-Bob-secret-1339185"
-KDC_INITIAL_SECRET_KEY = "This-is-Alice-secret-1339185"
+
 
 # reserve a PORT on your computer in our 
 # case it is 12345 but it can be anything 
@@ -112,7 +112,6 @@ def receiveMsg(s, listKeys):
 def main():
     initSocketCommunication(PORT, HOST, server_address)
 
-    print(f"Alice -> {ALICE_INITIAL_SECRET_KEY}\n")
     print(f"Bob -> {BOB_INITIAL_SECRET_KEY}\n")
 
 

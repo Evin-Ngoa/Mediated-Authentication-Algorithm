@@ -17,7 +17,6 @@ A very basic implementation of Mediated Authentication written in Python
 9. Alice encrypts 'hello Bob' Message with the session key and sends to BOB
 10. Bob decrypts the message using the session key.
 
-
 DONE
 --------------------------------------------------------------------------------------- 
 # How To Run

@@ -22,7 +22,7 @@ server_address = (HOST, PORT)
 SLEEPING_TIME = 3
 MESSAGE = 'Alice need to communicate with BOB, kindly send session key'  
 TO_BOB_MESSAGE = "Hello Bob"
-KDC_INITIAL_SECRET_KEY = "This-is-Alice-secret-1624259"
+ALICE_INITIAL_SECRET_KEY = "This-is-Alice-secret-1624259"
 
 # initiate Port Connection
 def iniPortCommunication():
@@ -36,7 +36,7 @@ def iniPortCommunication():
     sock.connect(server_address) 
 
     # exctract Key from string
-    key = utils.extractKey(KDC_INITIAL_SECRET_KEY)
+    key = utils.extractKey(ALICE_INITIAL_SECRET_KEY)
 
     print(f"Key => {key}\n")
 
@@ -45,7 +45,7 @@ def iniPortCommunication():
 
     cipherSecretbyte = bytes(cipher, 'utf-8')
     
-    print(f"Sending \'Alice needs to communicate with BOB, kindly send session key\' to Server ...")
+    print(f"Sending \' {MESSAGE} \' to Server ...")
     time.sleep(SLEEPING_TIME)
 
     # Send cipher
@@ -106,7 +106,7 @@ def initMsgSender(sock, message):
 
 
 def main():
-    print(f"KDC -> {KDC_INITIAL_SECRET_KEY}\n")
+    print(f"KDC -> {ALICE_INITIAL_SECRET_KEY}\n")
     iniPortCommunication()
 
 
